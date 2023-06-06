@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { UserAuth } from "../context/AuthContext";
 import { User } from "firebase/auth";
 import "./Account.css";
