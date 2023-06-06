@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import AboutUs from "./pages/AboutUs";
 import Checkout from "./pages/Checkout";
+import { Settings } from "./pages/Settings";
 import {
     collection,
     deleteDoc,
@@ -151,6 +152,14 @@ function App() {
                         element={
                             <Protected>
                                 <Admin />
+                            </Protected>
+                        }
+                    />
+                    <Route
+                        path="/settings"
+                        element={
+                            <Protected>
+                                <Settings />
                             </Protected>
                         }
                     />

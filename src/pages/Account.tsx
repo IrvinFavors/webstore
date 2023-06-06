@@ -9,6 +9,7 @@ import { updateProfile, updateEmail, updatePassword } from "firebase/auth";
 
 import "./Account.css";
 import DialogModal from "../components/Dialog";
+import { Link } from "react-router-dom";
 
 interface AuthContextType {
     user: User;
@@ -293,7 +294,13 @@ const Account = () => {
                     closeModal={closeModal}
                 />
             )}
-            ;<h1 className="account-title">Account</h1>
+            ;
+            <h1 className="account-title">
+                Account <br />{" "}
+                <Link to="/settings" className="navbar__links-item">
+                    <button>Settings</button>
+                </Link>
+            </h1>
             <div className="container">
                 {!isGoogleUser && (
                     <>
